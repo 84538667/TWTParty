@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="twtgrey">#1078F8</color>
+    <color name="twt_login_button_pressed">#FAA21E</color>
+    <color name="twt_login_button_start">#3EA8F9</color>
+    <color name="twt_login_button_end">#067ED9</color>
+</resources>
