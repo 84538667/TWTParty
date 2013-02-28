@@ -83,6 +83,7 @@ public class LoginActivity extends SherlockActivity{
 	//添加menu(这是调用的Actionsherlock中的menu)主要是给actionBar添加上menu
      public boolean onCreateOptionsMenu(Menu menu) {
     	 
+    	 
     	 	//设置subMenu 属性。
     	 	SubMenu submenu = menu.addSubMenu("Other action");
     	 	submenu.add(R.string.register);
