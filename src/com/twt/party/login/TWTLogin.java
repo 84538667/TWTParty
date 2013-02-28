@@ -94,10 +94,10 @@ public class TWTLogin {
 					
 					SharedPreferences sharedInfo = 
 								context.getSharedPreferences(TWTLoginConst.TWT_SHAREDPREFENCE_NAME
-																														, Context.MODE_PRIVATE);
+										, Context.MODE_PRIVATE);
 					//将用户名存储到SharedPreferences中
 					sharedInfo.edit().putString(TWTLoginConst.TWT_USER_NAME
-																, userInfoObj.getString(TWTLoginConst.TWT_USER_NAME)).commit();
+										, userInfoObj.getString(TWTLoginConst.TWT_USER_NAME)).commit();
 					Log.i(TWTLoginConst.TWT_PARTY_ERROR, userInfoObj.getString(TWTLoginConst.TWT_USER_NAME));
 					//将uid存储到SharedPreferences中，同时也存储是否登陆成功的标志
 					if(!(userInfoObj.getString(TWTLoginConst.TWT_USER_UID).equals("1")
@@ -105,7 +105,7 @@ public class TWTLogin {
 						
 						sharedInfo.edit().putBoolean(TWTLoginConst.IS_LOGIN_SUCCEED, true).commit();
 						sharedInfo.edit().putString(TWTLoginConst.TWT_USER_UID
-																	, userInfoObj.getString(TWTLoginConst.TWT_USER_UID)).commit();
+										, userInfoObj.getString(TWTLoginConst.TWT_USER_UID)).commit();
 					}
 					else
 						sharedInfo.edit().putBoolean(TWTLoginConst.IS_LOGIN_SUCCEED, false).commit();
@@ -116,7 +116,7 @@ public class TWTLogin {
 				}
 		
 		return context.getSharedPreferences(TWTLoginConst.TWT_SHAREDPREFENCE_NAME,
-																	0).getBoolean(TWTLoginConst.IS_LOGIN_SUCCEED, false);
+				                                                     0).getBoolean(TWTLoginConst.IS_LOGIN_SUCCEED, false);
 	}
 	
 	
