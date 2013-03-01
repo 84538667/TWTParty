@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+
+</RelativeLayout>
+
+<!-- 这个是登陆完成之后的主界面，这里新建的只是一个空白的RelativeLayout
+     所有的生成界面是由java代码生成详情请见 MainActivity -->

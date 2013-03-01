@@ -106,6 +106,7 @@ public class TWTLogin {
 						sharedInfo.edit().putBoolean(TWTLoginConst.IS_LOGIN_SUCCEED, true).commit();
 						sharedInfo.edit().putString(TWTLoginConst.TWT_USER_UID
 										, userInfoObj.getString(TWTLoginConst.TWT_USER_UID)).commit();
+						sharedInfo.edit().putString(TWTLoginConst.TWT_USER_NAME, userName).commit();
 					}
 					else
 						sharedInfo.edit().putBoolean(TWTLoginConst.IS_LOGIN_SUCCEED, false).commit();
@@ -142,5 +143,17 @@ public class TWTLogin {
 		String useruid = userinfo.getString(TWTLoginConst.TWT_USER_UID, "");
 		
 		return useruid;
+	}
+	
+	/**
+	 * 用来得到用户的登陆用的用户名
+	 * @param context 当前Activity或者Service的上下文
+	 * @return 返回用户的登陆用户名
+	 */
+	public static String getUserName(Context context){
+		SharedPreferences userinfo = context.getSharedPreferences(TWTLoginConst.TWT_SHAREDPREFENCE_NAME, 0);
+		String userName = userinfo.getString(TWTLoginConst.TWT_USER_NAME, "");
+				
+		return userName;
 	}
 }

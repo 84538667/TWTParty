@@ -58,7 +58,10 @@ public class LoginActivity extends SherlockActivity{
 						if(TWTLogin.loginToServer(LoginActivity.this, username, password))
 						{
 							//跳转到下一个Activity
-							b.putString("message", TWTLogin.getUserRealName(LoginActivity.this));
+							Intent intent = new Intent();
+							intent.setClass(LoginActivity.this, MainActivity.class);
+							LoginActivity.this.startActivity(intent);
+							b.putString("message", "欢迎你"+TWTLogin.getUserRealName(LoginActivity.this));
 						}
 						else
 						{
